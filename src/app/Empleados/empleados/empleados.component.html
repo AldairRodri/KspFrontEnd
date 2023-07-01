@@ -1,0 +1,33 @@
+
+<br>
+
+
+<div class="row">
+    
+
+
+
+    <div class="col-3" style="margin-bottom: 25px;" *ngFor="let TDC of resultados">
+        
+<div class="card" >
+    <img src="data:image/png;base64,{{TDC.fotoEmpleado}}" class="card-img-top" alt="Empleado">
+    
+    <div class="card-body">
+      <h5 class="card-title">{{TDC.nombreEmpleado}}</h5>
+      <p class="card-text">{{TDC.apellidoPaternoEmpleado}} {{TDC.apellidoMaternoEmpleado}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{TDC.puestoTrabajo}}</li>
+      <li class="list-group-item">{{TDC.salario}}</li>
+      <li class="list-group-item">A third item</li>
+    </ul>
+    <div class="card-body">
+      <button (click)="DeleteEmpleado(TDC.id)" class="card-link">Eliminar</button>
+      <button (click)="ActualizarEmpleado(TDC.id)" class="card-link">Edicion</button>
+    </div>
+  </div>
+    </div>
+</div>
+
+
+

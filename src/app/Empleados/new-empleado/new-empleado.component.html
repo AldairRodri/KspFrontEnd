@@ -1,0 +1,47 @@
+<form >
+    
+  <div class="mb-3">
+    <label for="formFile" class="form-label">Fotografia</label>
+    <input class="form-control" type="file" id="Fotografia" (change)="onFileSelected($event) ">
+    <script>
+      var base
+    </script>
+  </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Nombre</label>
+      <input  [(ngModel)]="NombreEmpleado" id="Nombre" name="Nombre" type="text" class="form-control" >
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Apellido materno</label>
+        <input  [(ngModel)]="ApellidoPaternoEmpleado" id="APaterno" name="APaterno" type="text" class="form-control" >
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Apellido Paterno</label>
+        <input  [(ngModel)]="ApellidoMaternoEmpleado" id="AMaterno" name="AMaterno" type="text" class="form-control" >
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">puesto</label>
+        <input  [(ngModel)]="PuestoTrabajo" id="Puesto" name="Puesto" type="text" class="form-control" >
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">salario</label>
+        <input [(ngModel)]="Salario" id="Salario" name="Salario" type="text" class="form-control" >
+      </div>
+
+      
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Fecha Contratacion</label>
+        <input [(ngModel)]="FechaContratacion" id="FechaContratacion" name="FechaContratacion" type="date" class="form-control" >
+      </div>
+
+
+
+      
+    
+    <button (click)="sendEmpleado()"  class="btn btn-primary">agregar</button>
+  </form>
